@@ -10,12 +10,12 @@ function App() {
   const coeffSuperBrut = 1.45;
   const semestreRatio = 0.5;
   
-  const getPartVariable = (sal) => {
-    if (sal >= 90000) return 0.20;
-    if (sal >= 80000) return 0.15;
-    if (sal >= 70000) return 0.10;
-    return 0;
-  };
+ const getPartVariable = (sal) => {
+  if (sal > 100000) return 0.20;
+  if (sal >= 90000) return 0.15;
+  if (sal >= 80000) return 0.10;
+  return 0;
+};
   
   const partVariable = getPartVariable(salaire);
   const nouveauFixe = salaire * (1 - partVariable);
